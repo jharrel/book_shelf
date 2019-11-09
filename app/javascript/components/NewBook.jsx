@@ -8,7 +8,7 @@ class NewBook extends React.Component {
             title: "",
             author: "",
             about: "",
-            image: ""
+            image: "",
         };
 
         this.onChange = this.onChange.bind(this);
@@ -29,15 +29,16 @@ class NewBook extends React.Component {
       onSubmit(event) {
         event.preventDefault();
         const url = "/api/v1/books/create";
-        const { title, author, about } = this.state;
+        const { title, author, about, image } = this.state;
     
-        if (title.length == 0 || author.length == 0 || about.length == 0)
+        if (title.length == 0 || author.length == 0 || about.length == 0 || image == 0)
           return;
     
         const body = {
           title,
           author,
-          about: about.replace(/\n/g, "<br> <br>")
+          about: about.replace(/\n/g, "<br> <br>"),
+          image
         };
     
         const token = document.querySelector('meta[name="csrf-token"]').content;
