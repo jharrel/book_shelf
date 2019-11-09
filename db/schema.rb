@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2019_11_08_201432) do
     t.string "title", null: false
     t.text "author", null: false
     t.text "about", null: false
-    t.string "image", default: "https://images.unsplash.com/photo-1468273519810-d3fe4c125cdb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
