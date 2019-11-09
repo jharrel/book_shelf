@@ -91,40 +91,34 @@ class Book extends React.Component {
               </h1>
             </div>
 
-            <div className="container py-5">
-              <div className="row">
-                <div className="col-sm-12 col-lg-3">
-                  <ul className="list-group">
-                    <h5 className="mb-2">Author</h5>
-                    {authorList}
-                  </ul>
-                </div>
-            <div className="container py-5">
-              <div className="row">
-                <div className="col-sm-12 col-lg-7">
-                  <ul className="list-group">
-                    <h5 className="mb-2">About</h5>
-                    {book.about}
-                  </ul>
-                  <img src={book.image} alt={`${book.name}`}/>
-                </div>
+            <div class="row">
+              <div class="col-12 col-md-8">
+                <h2 className="mb-2">Author: {book.author}</h2></div>
+                <div class="col-12 col-md-8">
+                <h2 className="mb-2">Description</h2>
+                {book.about}</div>
+              <div class="col-6 col-md-4">
+                <img src={book.image} alt={`${book.name}`}/>
               </div>
             </div>
+
 
               <div className="col-sm-12 col-lg-2">
                   <button type="button" className="btn btn-danger" onClick={this.deleteBook}>
                     Delete Book
                   </button>
-                </div>
+              </div>
+              <div className="col-sm-12 col-sm-2">
+                <Link to="/books" className="btn btn-lg custom-button" role="button">
+                Back to books list 
+                </Link>
               </div>
 
-            <div className="col-sm-12 col-sm-2">
-              <Link to="/books" className="btn btn-lg custom-button" role="button">
-              Back to books list 
-              </Link>
-            </div>
 
-            </div>
+
+
+
+            
           </div>
         );
       }
