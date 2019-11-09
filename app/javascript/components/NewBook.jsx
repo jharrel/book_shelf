@@ -88,6 +88,12 @@ class NewBook extends React.Component {
                       required
                       onChange={this.onChange}
                     />
+
+<div className='input-field'>
+                        <input type="text" name="image" id="image" value={this.state.image} onChange={this.handleChange} />
+                        <label htmlFor='image'>Image</label>
+                    </div>
+
                   </div>
                   <label htmlFor="about">Tell us about the book!</label>
                   <textarea
@@ -99,7 +105,7 @@ class NewBook extends React.Component {
                     onChange={this.onChange}
                   />
 
-                <Link
+        <Link
           to="/books"
           className="btn btn-lg custom-button"
           role="button"

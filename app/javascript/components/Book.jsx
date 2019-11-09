@@ -106,6 +106,7 @@ class Book extends React.Component {
                     <h5 className="mb-2">About</h5>
                     {book.about}
                   </ul>
+                  <img src={book.image} alt={`${book.name}-pic`}/>
                   {/* <div
                     dangerouslySetInnerHTML={{
                       __html: `${book.about}`
