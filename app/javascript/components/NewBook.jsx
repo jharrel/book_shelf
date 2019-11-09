@@ -8,6 +8,7 @@ class NewBook extends React.Component {
             title: "",
             author: "",
             about: "",
+            image: ""
         };
 
         this.onChange = this.onChange.bind(this);
@@ -88,13 +89,19 @@ class NewBook extends React.Component {
                       required
                       onChange={this.onChange}
                     />
-
-<div className='input-field'>
-                        <input type="text" name="image" id="image" value={this.state.image} onChange={this.handleChange} />
-                        <label htmlFor='image'>Image</label>
                     </div>
-
-                  </div>
+                    <div className="form-group">
+                    <label htmlFor="image">Image</label>
+                    <input
+                      type="text"
+                      name="image"
+                      value={this.state.image}
+                      id="image"
+                      className="form-control"
+                      required
+                      onChange={this.onChange}
+                    />
+                    </div>
                   <label htmlFor="about">Tell us about the book!</label>
                   <textarea
                     className="form-control"
@@ -105,13 +112,7 @@ class NewBook extends React.Component {
                     onChange={this.onChange}
                   />
 
-        <Link
-          to="/books"
-          className="btn btn-lg custom-button"
-          role="button"
-        >
-          View Books
-        </Link>
+
 
                   <button type="submit" className="btn custom-button mt-3">
                     Create Book

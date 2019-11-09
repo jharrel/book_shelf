@@ -9,5 +9,6 @@
 Book.create(
     title: "Star Wars",
     author: 'Claudia Grey',
-    about: 'A fantastic story'
+    about: 'A fantastic story',
+    image: 'https://prodimage.images-bn.com/pimages/9780545069670_p0_v4_s550x406.jpg'
   )

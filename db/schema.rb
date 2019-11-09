@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2019_11_08_201432) do
     t.string "title", null: false
     t.text "author", null: false
     t.text "about", null: false
-    t.string "image"
+    t.text "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
