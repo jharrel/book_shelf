@@ -33,7 +33,8 @@ class Books extends React.Component {
                 alt={`${book.image} image`}
               />
               <div className="card-body">
-                <h5 className="card-title">{book.title}</h5>
+                <h3 className="card-title">{book.title}</h3>
+                <h6 className="card-title">Author: {book.author}</h6>
                 <Link to={`/book/${book.id}`} className="btn custom-button">
                   View Book
                 </Link>
@@ -44,7 +45,7 @@ class Books extends React.Component {
         const noBook = (
           <div className="vw-100 vh-50 d-flex align-items-center justify-content-center">
             <h4>
-              No books yet. Why not <Link to="/new_book">create one</Link>
+              No books yet. Why not <Link to="/api/v1/books/create">create one</Link>
             </h4>
           </div>
         );

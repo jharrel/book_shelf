@@ -22,7 +22,7 @@ class NewBook extends React.Component {
     }
 
     onChange(event) {
-        this.setState({ [event.target.title]: event.target.value });
+        this.setState({ [event.target.name]: event.target.value });
       }
     
       onSubmit(event) {
@@ -68,11 +68,11 @@ class NewBook extends React.Component {
                 </h1>
                 <form onSubmit={this.onSubmit}>
                   <div className="form-group">
-                    <label htmlFor="titleName">Title</label>
+                    <label htmlFor="bookTitle">Title</label>
                     <input
                       type="text"
                       name="title"
-                      id="titleName"
+                      id="bookTitle"
                       className="form-control"
                       required
                       onChange={this.onChange}
@@ -88,9 +88,6 @@ class NewBook extends React.Component {
                       required
                       onChange={this.onChange}
                     />
-                    <small id="authorHelp" className="form-text text-muted">
-                      ...
-                    </small>
                   </div>
                   <label htmlFor="about">Tell us about the book!</label>
                   <textarea
@@ -101,6 +98,15 @@ class NewBook extends React.Component {
                     required
                     onChange={this.onChange}
                   />
+
+                <Link
+          to="/books"
+          className="btn btn-lg custom-button"
+          role="button"
+        >
+          View Books
+        </Link>
+
                   <button type="submit" className="btn custom-button mt-3">
                     Create Book
                   </button>
