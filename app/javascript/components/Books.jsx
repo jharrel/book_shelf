@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Counter from "./counter";
 
 class Books extends React.Component {
     constructor(props) {
@@ -38,6 +39,8 @@ class Books extends React.Component {
                 <Link to={`/book/${book.id}`} className="btn custom-button">
                   View Book
                 </Link>
+                <link to={this.counter}></link>
+                {/* ENTER COUNTER BUTTON HERE */}
               </div>
             </div>
           </div>
@@ -69,12 +72,18 @@ class Books extends React.Component {
                     Create New Book
                   </Link>
                 </div>
+
+
+
+                {/* This is the book card class. if removed, you'll not see the books */}
                 <div className="row">
-                  {books.length > 0 ? allBooks : noBook}
+                {books.length > 0 ? allBooks : noBook}
                 </div>
-                <Link to="/" className="btn btn-link">
+                {/* End of the book cards */}
+
+                {/* <Link to="/" className="btn btn-link">
                   Home
-                </Link>
+                </Link> */}
               </main>
             </div>
           </>

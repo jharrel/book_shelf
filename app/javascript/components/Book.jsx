@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Counter from '../components/counter';
 
 class Book extends React.Component {
     constructor(props) {
@@ -8,6 +9,20 @@ class Book extends React.Component {
       this.addHtmlEntities = this.addHtmlEntities.bind(this);
       this.deleteBook = this.deleteBook.bind(this);
     }
+
+
+    // state = {
+    //   count: 0
+    // }
+
+
+    // incrementMe = () => {
+    //   let newCount = this.state.count + 1
+    //   this.setState({
+    //     count: newCount
+    //   })
+    //   console.log("like")
+    // }
 
     componentDidMount() {
         const {
@@ -101,7 +116,9 @@ class Book extends React.Component {
                 <img src={book.image} alt={`${book.name}`}/>
               </div>
             </div>
-
+              {/* <button onClick={this.incrementMe}> Likes: {this.state.count} </button> */}
+              
+              <Counter/>
 
               <div className="col-sm-12 col-lg-2">
                   <button type="button" className="btn btn-danger" onClick={this.deleteBook}>
@@ -113,14 +130,9 @@ class Book extends React.Component {
                 Back to books list 
                 </Link>
               </div>
-
-
-
-
-
-            
           </div>
         );
+        
       }
   }
   
