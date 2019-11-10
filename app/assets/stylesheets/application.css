@@ -39,3 +39,22 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+header {
+  background: #2b2b2b;
+  height: 60px;
+}
+
+header h1 a{
+  display: inline-block;
+  font-family: "Maven Pro";
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  padding: 4px 1%;
+  text-decoration: none;
+}
+
+header h1 a:hover {
+  text-decoration: underline;
+}

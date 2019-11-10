@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Counter from '../components/counter';
-
 class Book extends React.Component {
     constructor(props) {
       super(props);
@@ -107,28 +106,24 @@ class Book extends React.Component {
             </div>
 
             <div class="row">
-              <div class="col-12 col-md-8">
+              <div class="col-12 px-md-5 col-md-8 p-3 border bg-light">
                 <h2 className="mb-2">Author: {book.author}</h2></div>
-                <div class="col-12 col-md-8">
+                <div class="col-12 px-md-5 col-md-8 p-3 border bg-light">
                 <h2 className="mb-2">Description</h2>
                 {book.about}</div>
-              <div class="col-6 col-md-4">
+              <div class="col-6 col-md-4 p-3 bg-light">
                 <img src={book.image} alt={`${book.name}`}/>
               </div>
             </div>
               {/* <button onClick={this.incrementMe}> Likes: {this.state.count} </button> */}
               
-              <Counter/>
-
-              <div className="col-sm-12 col-lg-2">
-                  <button type="button" className="btn btn-danger" onClick={this.deleteBook}>
-                    Delete Book
-                  </button>
-              </div>
               <div className="col-sm-12 col-sm-2">
                 <Link to="/books" className="btn btn-lg custom-button" role="button">
-                Back to books list 
+                Back to your book list 
                 </Link>
+                <button type="button" className="btn btn-lg btn-danger" onClick={this.deleteBook}>
+                    Delete Book
+                </button>
               </div>
           </div>
         );
